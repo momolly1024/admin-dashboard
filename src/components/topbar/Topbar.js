@@ -3,6 +3,7 @@ import './topbar.css'
 import { NotificationsNone, Language, Settings } from '@mui/icons-material'
 import { ClassNames } from '@emotion/react'
 import Modal from 'react-modal'
+import { Link } from 'react-router-dom'
 
 Modal.setAppElement('#root')
 
@@ -109,7 +110,9 @@ function Topbar() {
         <div className='topbar'>
             <div className='topbarWrapper'>
                 <div className='topLeft'>
-                    <span className='logo'>admin dashboard</span>
+                    <Link to='/' className='link'>
+                        <span className='logo'>admin dashboard</span>
+                    </Link>
                 </div>
                 <div className='topRight'>
                     <div className='topbarIconContainer'>
@@ -127,11 +130,13 @@ function Topbar() {
                     <div className='topbarIconContainer'>
                         <Settings />
                     </div>
-                    <img
-                        src='https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
-                        alt=''
-                        className='topAvatar'
-                    />
+                    <Link to='/profile' className='link'>
+                        <img
+                            src='https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
+                            alt=''
+                            className='topAvatar'
+                        />
+                    </Link>
                 </div>
             </div>
         </div>

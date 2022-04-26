@@ -70,6 +70,7 @@ export default function ProductList() {
                 columns={columns}
                 pageSize={8}
                 checkboxSelection
+                rowsPerPageOptions={[8, 16, 24, 32]}
             />
         </div>
     )

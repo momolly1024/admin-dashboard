@@ -9,6 +9,7 @@ import NewUser from './pages/newUser/NewUser'
 import ProductList from './pages/productList/ProductList'
 import Product from './pages/product/Product'
 import NewProduct from './pages/newProduct/NewProduct'
+import AdminProfile from './pages/adminProfile/AdminProfile'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -21,6 +22,11 @@ function App() {
                     <Sidebar />
                     <Routes>
                         <Route path='/' exact element={<Home />} />
+
+                        <Route
+                            path='/profile'
+                            element={<AdminProfile admin='Molly' info='info' />}
+                        />
                         <Route path='/users' element={<UserList />} />
                         <Route path='/user/:userId' element={<User />} />
                         <Route path='/newUser' element={<NewUser />} />
@@ -29,10 +35,7 @@ function App() {
                             path='/product/:productId'
                             element={<Product />}
                         />
-                        <Route
-                            path='/newproduct'
-                            element={<NewProduct />}
-                        ></Route>
+                        <Route path='/newproduct' element={<NewProduct />} />
                     </Routes>
                 </div>
             </Router>
